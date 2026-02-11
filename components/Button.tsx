@@ -1,13 +1,13 @@
-import React from 'react'
-import Link from 'next/link'
-import { RiArrowRightUpLine } from 'react-icons/ri'
+import React from 'react';
+import Link from 'next/link';
+import { RiArrowRightUpLine } from 'react-icons/ri';
 
 interface Props {
-  text: string
-  link?: string
+  text: string;
+  link?: string;
 }
 
-const Button = ({ text, link = '/' }: Props) => {
+const Button = ({ text, link = '' }: Props) => {
   return (
     <Link
       href={link}
@@ -20,7 +20,7 @@ const Button = ({ text, link = '/' }: Props) => {
         <RiArrowRightUpLine className="text-primary text-xl group-hover:rotate-45 transition-all duration-200" />
       </div>
     </Link>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

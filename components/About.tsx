@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Image from 'next/image';
 import PreTitle from './PreTitle';
 import Button from './Button';
@@ -39,7 +39,7 @@ const About = () => {
                   alt="25th Anniversary Logo"
                 />
               </div>
-              <Button text="Contact us" />
+              <Button text="Contact us" link="#contact" />
             </motion.div>
           </div>
           <motion.div
@@ -52,11 +52,11 @@ const About = () => {
             <div className="xl:w-[600px] xl:h-[400px] relative">
               <div className="hidden xl:flex w-[600px] h-[400px] bg-accent absolute -top-4 -left-4 -z-10"></div>
               <Image
-                src="/about/globe_office_image.jpg"
+                src="/about/about2.png"
                 fill
                 sizes="590px"
                 alt="Image representing data across the globe"
-                className="object-cover"
+                className="object-cover scale-x-[-1]"
               />
             </div>
           </motion.div>

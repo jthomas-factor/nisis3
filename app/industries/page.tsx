@@ -1,13 +1,13 @@
 import { client } from '@/sanity/lib/client';
-import { projectsQuery } from '@/lib/queries';
+import { industriesQuery } from '@/lib/queries';
 import { Post } from '@/lib/types';
 import ListPageTemplate from '@/components/ListPageTemplate';
 
-const Projects = async () => {
-  const posts = await client.fetch<Post[]>(projectsQuery);
-  const title = 'projects';
+const Industries = async () => {
+  const posts = await client.fetch<Post[]>(industriesQuery);
+  const title = 'industries';
 
   return <ListPageTemplate title={title} posts={posts} />;
 };
 
-export default Projects;
+export default Industries;

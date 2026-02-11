@@ -3,9 +3,11 @@ import { useEffect, useState } from 'react';
 import Logo from './Logo';
 import NavMobile from './NavMobile';
 import { links } from '@/lib/constant';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const [headerActive, setHeaderActive] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,10 +41,11 @@ const Header = () => {
                       className="text-primary text-sm uppercase font-primary font-medium tracking-[1.2px] after:content-['/'] after:mx-4 last:after:content-none after:text-primary"
                     >
                       <a
-                        href={`/#${link.path}`}
-                        className="cursor-pointer text-base text-gray-700 hover:text-accent"
+                        href={`/${link.path}`}
+                        className={`cursor-pointer text-base transition-colors duration-300 ${pathname === `/${link.path}` ? 'text-accent' : 'text-gray-700 hover:text-accent'} `}
                       >
-                        {link.name}
+                        {' '}
+                        {link.name}{' '}
                       </a>
                     </li>
                   );

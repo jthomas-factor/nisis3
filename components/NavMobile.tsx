@@ -9,10 +9,11 @@ import {
   SheetTrigger,
 } from './ui/sheet';
 import { RiMenu3Fill } from 'react-icons/ri';
-import { Link as ScrollLink } from 'react-scroll';
+// import { Link as ScrollLink } from 'react-scroll';
 import Logo from './Logo';
 import { links } from '@/lib/constant';
 import Socials from './Socials';
+import Link from 'next/link';
 
 const NavMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +43,7 @@ const NavMobile = () => {
                   key={index}
                   className="text-primary uppercase font-primary font-medium tracking-[1.2px]"
                 >
-                  <ScrollLink
+                  {/* <ScrollLink
                     to={link.path}
                     smooth
                     spy
@@ -52,7 +53,8 @@ const NavMobile = () => {
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}
-                  </ScrollLink>
+                  </ScrollLink> */}
+                  <Link href={link.path}>{link.name}</Link>
                 </li>
               );
             })}
