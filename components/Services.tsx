@@ -97,7 +97,6 @@ const Services = () => {
         >
           <PreTitle text="Services" center={true} />
           <h2 className="h2 mb-3">Core Capabilities</h2>
-          <p></p>
         </motion.div>
         <motion.div
           variants={fadeIn('up', 0.3)}
@@ -110,19 +109,23 @@ const Services = () => {
             onValueChange={value => setActiveTab(value)}
             className="flex flex-col xl:flex-row w-full gap-[30px]"
           >
-            <TabsList className="grid w-full grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-[30px] h-full w-full rounded-none p-0 bg-transparent xl:w-[345px]">
+            <TabsList
+              aria-label="FACTOR Service Categories"
+              className="grid w-full grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-[30px] h-full w-full rounded-none p-0 bg-transparent xl:w-[345px]"
+            >
               {serviceData.map(item => {
                 return (
                   <TabsTrigger
                     key={item.name}
+                    aria-label={`${item.title} Services`}
                     value={item.name}
-                    className="cursor-pointer w-full rounded-none h-[100px] flex items-center relative shadow p-0 outline-none"
+                    className="cursor-pointer w-full rounded-none h-[100px] flex items-center relative shadow p-0 outline-none transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
                   >
                     <div
                       className={`w-[100px] h-[100px] flex items-center justify-center absolute left-0 ${
-                        activeTab === item.name
-                          ? 'bg-primary text-white'
-                          : 'bg-secondary text-white'
+                        activeTab === item.name ?
+                          'bg-primary text-white'
+                        : 'bg-secondary text-white'
                       }`}
                     >
                       {item.icon}
@@ -185,7 +188,7 @@ const Services = () => {
                               );
                             })}
                           </ul>
-                          <Button text="Read more" />
+                          <Button text="Read more" link="services" />
                         </div>
                       </div>
                     </motion.div>

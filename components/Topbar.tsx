@@ -24,7 +24,7 @@ const Topbar = () => {
             </div>
           </div>
           <Socials
-            containerStyles="flex items-center gap-8 mx-auto xl:mx-0"
+            containerStyles="flex items-center gap-8 mx-auto xl:mx-0 cursor-pointer"
             iconStyles="text-white"
           />
         </div>

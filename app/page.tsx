@@ -1,53 +1,111 @@
-'use client';
 import About from '@/components/About';
 import Clients from '@/components/Clients';
 import Contact from '@/components/Contact';
-import Faq from '@/components/Faq';
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
-import Testimonials from '@/components/Testimonials';
-import Topbar from '@/components/Topbar';
 import Work from '@/components/Work';
-import React, { useEffect, useState } from 'react';
+import { Metadata } from 'next';
+import Script from 'next/script';
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://factorinc.com'),
+  title: 'FACTOR, Inc. | Geospatial, Data & Risk Modeling Solutions',
+
+  description:
+    'FACTOR, Inc. delivers geospatial science, data analytics, and software solutions to help organizations manage risk, improve safety, and make confident decisions.',
+
+  keywords: [
+    'FACTOR Inc',
+    'geospatial services',
+    'risk modeling',
+    'data analytics',
+    'decision support systems',
+    'government contractor',
+    'infrastructure safety',
+    'environmental analysis',
+    'GIS consulting',
+    'software development',
+  ],
+
+  openGraph: {
+    title: 'FACTOR, Inc. | Powering the Future of Industry',
+    description:
+      'Geospatial, data, and software solutions for infrastructure, safety, and environmental challenges.',
+    url: 'https://factorinc.com',
+    siteName: 'FACTOR, Inc.',
+    images: [
+      {
+        url: '/hero/hero.png',
+        width: 1200,
+        height: 630,
+        alt: 'FACTOR Inc. Industry Data and Technology Solutions',
+      },
+    ],
+    type: 'website',
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FACTOR, Inc. | Powering the Future of Industry',
+    description:
+      'Helping organizations manage risk through geospatial and data-driven solutions.',
+    images: ['/hero/hero.png'],
+  },
+
+  alternates: {
+    canonical: 'https://factorinc.com',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 const Home = () => {
-  const [headerActive, setHeaderActive] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setHeaderActive(window.scrollY > 200);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  });
-
   return (
     <>
-      <Topbar />
-      {/* static header */}
-      <div className="relative z-10">
-        <Header />
-      </div>
-      {/* animated header */}
-      <div
-        className={`w-full transition-transform duration-500 fixed top-0 left-0 z-50 ${
-          headerActive ? 'translate-y-0' : '-translate-y-full'
-        }`}
-      >
-        <Header />
-      </div>
+      <Script
+        id="organization-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'FACTOR, Inc.',
+            url: 'https://factorinc.com',
+            logo: 'https://factorinc.com/logo.png',
+            description:
+              'Geospatial, data, and software solutions for infrastructure, safety, and environmental challenges.',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: '209 10th Ave. S. Suite 560',
+              addressLocality: 'Nashville',
+              addressRegion: 'TN',
+              postalCode: '37203',
+              addressCountry: 'US',
+            },
+            contactPoint: [
+              {
+                '@type': 'ContactPoint',
+                telephone: '+1-615-321-4848',
+                contactType: 'customer service',
+              },
+              {
+                '@type': 'ContactPoint',
+                telephone: '+1-202-891-6000',
+                contactType: 'government contracts',
+              },
+            ],
+          }),
+        }}
+      />
       <Hero />
       <About />
       <Clients />
       <Services />
       <Work />
       <Contact />
-      <Footer />
     </>
   );
 };

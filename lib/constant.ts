@@ -1,7 +1,7 @@
 export const links = [
   {
     name: 'home',
-    path: 'home',
+    path: '',
   },
   {
     name: 'about',
@@ -12,11 +12,60 @@ export const links = [
     path: 'services',
   },
   {
+    name: 'industries',
+    path: 'industries',
+  },
+  {
     name: 'projects',
     path: 'projects',
   },
   {
+    name: 'contract vehicles',
+    path: 'contract-vehicles',
+  },
+  {
     name: 'contact',
-    path: 'contact',
+    path: '/#contact',
   },
 ];
+
+export const footerLinks = [
+  {
+    name: 'Home',
+    path: '',
+  },
+  {
+    name: 'About',
+    path: 'about',
+  },
+  {
+    name: 'Services',
+    path: 'services',
+  },
+  {
+    name: 'Industries',
+    path: 'industries',
+  },
+  {
+    name: 'Projects',
+    path: 'projects',
+  },
+  {
+    name: 'Contract Vehicles',
+    path: 'contract-vehicles',
+  },
+  {
+    name: 'Leadership',
+    path: '/about/leadership',
+  },
+  {
+    name: 'Contact',
+    path: '/#contact',
+  },
+];
+
+export const SERVICES = {
+  geospatial: 'Geospatial Science & Engineering',
+  data: 'Data & Decision Support',
+  development: 'Full Stack Software Development',
+} as const;
