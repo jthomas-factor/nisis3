@@ -46,7 +46,8 @@ const Header = () => {
                         className={`cursor-pointer text-base transition-colors duration-300 ${pathname === `/${link.path}` ? 'text-accent' : 'text-gray-700 hover:text-accent'} `}
                       >
                         {' '}
-                        {link.name}{' '}
+                        {link.name}
+                        {' '}
                       </Link>
                     </li>
                   );

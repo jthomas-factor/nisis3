@@ -142,7 +142,7 @@ const Contracts = () => {
           aria-label="Contract Service Categories"
           className="grid w-full grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-[30px] h-full w-full rounded-none p-0 bg-transparent xl:w-[345px]"
         >
-          {serviceData.map(item => {
+          {serviceData.map((item) => {
             return (
               <TabsTrigger
                 key={item.name}
@@ -152,9 +152,9 @@ const Contracts = () => {
               >
                 <div
                   className={`w-[100px] h-[100px] flex items-center justify-center absolute left-0 ${
-                    activeTab === item.name ?
-                      'bg-primary text-white'
-                    : 'bg-secondary text-white'
+                    activeTab === item.name
+                      ? 'bg-primary text-white'
+                      : 'bg-secondary text-white'
                   }`}
                 >
                   {item.icon}
@@ -167,7 +167,7 @@ const Contracts = () => {
           })}
         </TabsList>
         <div className="flex-1 bg-white shadow p-[30px]">
-          {serviceData.map(item => {
+          {serviceData.map((item) => {
             return (
               <TabsContent key={item.name} value={item.name} className="m-0">
                 <motion.div

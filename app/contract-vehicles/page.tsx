@@ -61,17 +61,17 @@ const page = () => {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Organization',
-            name: 'FACTOR, Inc.',
-            url: 'https://factorinc.com',
-            contactPoint: {
+            'name': 'FACTOR, Inc.',
+            'url': 'https://factorinc.com',
+            'contactPoint': {
               '@type': 'ContactPoint',
-              name: 'Mark Lepofsky',
-              telephone: '+1-202-891-6000',
-              contactType: 'Government Contracts',
-              email: 'GSAorders@factorinc.com',
+              'name': 'Mark Lepofsky',
+              'telephone': '+1-202-891-6000',
+              'contactType': 'Government Contracts',
+              'email': 'GSAorders@factorinc.com',
             },
-            areaServed: 'US',
-            sameAs: [],
+            'areaServed': 'US',
+            'sameAs': [],
           }),
         }}
       />

@@ -21,7 +21,12 @@ const Socials = ({ containerStyles, iconStyles }: Props) => {
         return (
           <Link href={item.path} key={index} className={iconStyles}>
             {item.icon}
-            <span className="sr-only">Visit {item.label} page</span>
+            <span className="sr-only">
+              Visit
+              {item.label}
+              {' '}
+              page
+            </span>
           </Link>
         );
       })}

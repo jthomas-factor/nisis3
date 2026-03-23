@@ -27,9 +27,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.seo?.metaTitle || post.title,
       description: post.seo?.metaDescription || post.summary,
       images:
-        post.seo?.imageUrl ? [{ url: post.seo.imageUrl }]
-        : post.imageUrl ? [{ url: post.imageUrl }]
-        : [],
+        post.seo?.imageUrl
+          ? [{ url: post.seo.imageUrl }]
+          : post.imageUrl
+            ? [{ url: post.imageUrl }]
+            : [],
     },
     robots: {
       index: !post.seo?.noIndex,

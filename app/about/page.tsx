@@ -42,16 +42,16 @@ const AboutPage = async () => {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'ProfessionalService',
-            name: 'FACTOR',
-            foundingDate: '1997',
-            areaServed: 'United States',
-            serviceType: [
+            'name': 'FACTOR',
+            'foundingDate': '1997',
+            'areaServed': 'United States',
+            'serviceType': [
               'Geospatial Intelligence',
               'Risk Management Consulting',
               'GIS Software Development',
               'Federal Technology Consulting',
             ],
-            knowsAbout: [
+            'knowsAbout': [
               'ArcGIS',
               'Spatial Data Analytics',
               'Transportation Risk',

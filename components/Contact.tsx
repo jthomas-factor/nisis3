@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { RiMap2Line, RiSmartphoneLine } from 'react-icons/ri';
 import Form from './Form';
 import { motion } from 'framer-motion';

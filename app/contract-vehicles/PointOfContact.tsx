@@ -28,17 +28,21 @@ const PointOfContact = () => {
               <Link href="/about/leadership/mark-lepofsky">Mark Lepofsky</Link>
             </li>
             <li>
-              Phone: <Link href="tel:+12028916000">202-891-6000</Link>
+              Phone:
+              {' '}
+              <Link href="tel:+12028916000">202-891-6000</Link>
             </li>
             <li>Fax: 615-457-8055</li>
             <li>
-              GSA:{' '}
+              GSA:
+              {' '}
               <Link href="mailto:GSAorders@factorinc.com">
                 GSAorders@factorinc.com
               </Link>
             </li>
             <li>
-              FAA:{' '}
+              FAA:
+              {' '}
               <Link href="mailto:info@factorinc.com">info@factorinc.com</Link>
             </li>
           </ul>

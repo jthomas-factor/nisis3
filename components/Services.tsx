@@ -113,7 +113,7 @@ const Services = () => {
               aria-label="FACTOR Service Categories"
               className="grid w-full grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-[30px] h-full w-full rounded-none p-0 bg-transparent xl:w-[345px]"
             >
-              {serviceData.map(item => {
+              {serviceData.map((item) => {
                 return (
                   <TabsTrigger
                     key={item.name}
@@ -123,9 +123,9 @@ const Services = () => {
                   >
                     <div
                       className={`w-[100px] h-[100px] flex items-center justify-center absolute left-0 ${
-                        activeTab === item.name ?
-                          'bg-primary text-white'
-                        : 'bg-secondary text-white'
+                        activeTab === item.name
+                          ? 'bg-primary text-white'
+                          : 'bg-secondary text-white'
                       }`}
                     >
                       {item.icon}
@@ -138,7 +138,7 @@ const Services = () => {
               })}
             </TabsList>
             <div className="flex-1 bg-white shadow h-[490px] p-[30px]">
-              {serviceData.map(item => {
+              {serviceData.map((item) => {
                 return (
                   <TabsContent
                     key={item.name}

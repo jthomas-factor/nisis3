@@ -9,8 +9,8 @@ interface Props {
 }
 
 const Button = ({ text, link = '', type }: Props) => {
-  const classes =
-    'w-[210px] h-[54px] py-[5px] pl-[10px] pr-[5px] flex items-center justify-between min-w-[200px] group bg-primary cursor-pointer';
+  const classes
+    = 'w-[210px] h-[54px] py-[5px] pl-[10px] pr-[5px] flex items-center justify-between min-w-[200px] group bg-primary cursor-pointer';
 
   if (link) {
     return (

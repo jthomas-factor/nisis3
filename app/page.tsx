@@ -72,29 +72,29 @@ const Home = () => {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Organization',
-            name: 'FACTOR, Inc.',
-            url: 'https://factorinc.com',
-            logo: 'https://factorinc.com/logo.png',
-            description:
+            'name': 'FACTOR, Inc.',
+            'url': 'https://factorinc.com',
+            'logo': 'https://factorinc.com/logo.png',
+            'description':
               'Geospatial, data, and software solutions for infrastructure, safety, and environmental challenges.',
-            address: {
+            'address': {
               '@type': 'PostalAddress',
-              streetAddress: '209 10th Ave. S. Suite 560',
-              addressLocality: 'Nashville',
-              addressRegion: 'TN',
-              postalCode: '37203',
-              addressCountry: 'US',
+              'streetAddress': '209 10th Ave. S. Suite 560',
+              'addressLocality': 'Nashville',
+              'addressRegion': 'TN',
+              'postalCode': '37203',
+              'addressCountry': 'US',
             },
-            contactPoint: [
+            'contactPoint': [
               {
                 '@type': 'ContactPoint',
-                telephone: '+1-615-321-4848',
-                contactType: 'customer service',
+                'telephone': '+1-615-321-4848',
+                'contactType': 'customer service',
               },
               {
                 '@type': 'ContactPoint',
-                telephone: '+1-202-891-6000',
-                contactType: 'government contracts',
+                'telephone': '+1-202-891-6000',
+                'contactType': 'government contracts',
               },
             ],
           }),

@@ -39,11 +39,14 @@ const PostListTemplate = ({ title, posts }: Props) => {
             <div className="px-6 pt-4 pb-6 flex flex-col gap-6 flex-grow">
               <div className="relative group">
                 {' '}
-                <h2 className="h3 line-clamp-1">{post.title}</h2>{' '}
+                <h2 className="h3 line-clamp-1">{post.title}</h2>
+                {' '}
                 <span className="absolute left-0 top-full mt-1 hidden group-hover:block whitespace-nowrap bg-black text-white text-xs px-2 py-1 rounded shadow">
                   {' '}
-                  {post.title}{' '}
-                </span>{' '}
+                  {post.title}
+                  {' '}
+                </span>
+                {' '}
               </div>
               <p className="line-clamp-2">{post.subtitle}</p>
 

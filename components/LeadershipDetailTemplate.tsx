@@ -17,12 +17,12 @@ export default function LeadershipDetailTemplate({
     <div className="container">
       {/* Breadcrumbs */}
       <nav className="my-8 text-sm text-gray-500 flex items-center gap-2">
-        <Link href={`/about`} className="hover:text-primary transition-colors">
+        <Link href="/about" className="hover:text-primary transition-colors">
           About
         </Link>
         <span>/</span>
         <Link
-          href={`/about/leadership`}
+          href="/about/leadership"
           className="hover:text-primary transition-colors"
         >
           Leadership
