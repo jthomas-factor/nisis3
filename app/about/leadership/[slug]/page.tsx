@@ -5,7 +5,7 @@ import { Leadership } from '@/lib/types';
 import LeadershipDetailTemplate from '@/components/LeadershipDetailTemplate';
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 const LeaderPage = async ({ params }: Props) => {
@@ -15,7 +15,7 @@ const LeaderPage = async ({ params }: Props) => {
     slug,
   });
 
-  return <LeadershipDetailTemplate title="about / Leadership" post={post} />;
+  return <LeadershipDetailTemplate post={post} />;
 };
 
 export default LeaderPage;
