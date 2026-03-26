@@ -28,9 +28,9 @@ export default defineConfig({
     presentationTool({
       previewUrl: {
         origin:
-          process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:3000',
+          process.env.NEXT_PUBLIC_SANITY_STUDIO_PREVIEW_URL || 'http://localhost:3000',
         draftMode: {
-          enable: '/api/draft-mode/enable', // Next.js route you'll create
+          enable: '/api/draft-mode/enable',
         },
       },
     }),
